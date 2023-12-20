@@ -1,0 +1,425 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - mrng
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - fine
+    - great
+    - good
+    - not bad
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: gratitude
+  examples: |
+    - thanks
+    - thank you
+    - wow, thanks for your help
+    - thanks for the help
+    - thanks alot
+    - thank you so much 
+
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: open_websites
+  examples: |
+    - open google
+    - open amazon
+    - redirect to google website
+    - open myntra website
+    - open nyka
+    - open flipkart
+
+- intent: get_weather
+  examples: |
+    - What's the weather like in [London](city)?
+    - Tell me the weather in [New York](city)
+    - How's the weather in [Paris](city) today?
+    - How's the weather in [Chennai](city) today?
+    - Tell me the weather in [Bangalore](city)
+    - What's the weather forecast for [Gurugram](city)?
+    - Can you tell me about the weather in [Coimbatore](city)?
+    - How cold is it in [Moscow](city) right now?
+    - Is it raining in [Hyderabad](city)?
+    - Give me the weather update for [Jaipur](city).
+    - Tell me the temperature in [Noida](city).
+    - What's the weather like in [Rome](city) today?
+    - How's the weather expected to be in [Singapore](city)?
+    - Describe the weather in [Dubai](city).
+    - Any updates on the weather conditions in [Shanghai](city)?
+
+- intent: ask_id_card_instructions
+  examples: |
+    - How can I apply for an ID card?
+    - Can you help me with applying for an ID card?
+    - I need instructions to get an ID card.
+
+- intent: ask_how_to_book_room
+  examples: |
+    - How can I book a meeting room?
+    - What's the process for reserving a workspace?
+    - Can you guide me on making room reservations?
+    - How to book a conference room?
+
+- intent: relocate
+  examples: |
+   - How to relocate my current working location?
+   - What's the process to change my work location?
+   - Can you help me with relocating my workspace?
+   - I need information on relocating my current location.
+   - How do I go about changing my work location?
+   - Tell me about the procedure to relocate my workplace.
+
+- intent: book_seat
+  examples: |
+   - How can I book a seat in the workplace?
+   - What's the process to reserve a seat?
+   - Can you help me with seat booking?
+   - I need information on reserving a workspace seat.
+   - How do I go about selecting and reserving a seat?
+
+- intent: learning_materials
+  examples: |
+    - Can you provide learning materials on [Linux](topic)?
+    - I need resources about [Azure](topic) learning.
+    - Tell me about [AWS](topic) tutorials.
+    - Provide the learning materials on [Python](topic)?
+    - Learning material on [Data Science](topic)?
+
+- intent: download_payslip
+  examples: |
+    - How to download monthly payslip?
+    - Can you help me with the process of downloading monthly payslip?
+    - Where can I download payslip?
+    - Can you guide me with the process of downloading payslip?
+
+- intent: wfh_reimbursment
+  examples: |
+    - How to claim WFH Reimbursments?
+    - Can you help me claim WFH Reimbursments?
+    - What is the process of claiming WFH Reimbursments?
+
+- intent: bank_account_change
+  examples: |
+    - How to change my bank account?
+    - What's the process of changing my bank account?
+
+- intent: apply_for_techleap
+  examples: |
+    - How can I apply for TechLeap?
+    - What's the process to apply for TechLeap?
+    - Can you guide me through applying for TechLeap?
+    - How do I register for TechLeap?
+    - Tell me how to enroll in TechLeap?
+
+- intent: assessment_mailers
+  examples: |
+    - When will I receive the mailers for Assessment Registration?
+    - How long does it take to get assessment registration mailers?
+    - When do I expect the assessment registration emails?
+    - After how long will I receive the assessment emails?
+
+- intent: school_selection
+  examples: |
+    - What should I consider when choosing a school in TechLeap?
+    - What factors are important for selecting a school in TechLeap?
+    - Can you help me understand the criteria for choosing a school in TechLeap?
+
+- intent: open_myte
+  examples: |
+    - give the myte url
+    - open myte
+    - Myte url
+
+- intent: get_myte_expenses_instructions
+  examples: |
+    - How do I process expenses in MyTE?
+    - Tell me the steps to manage expenses in MyTE
+    - Can you guide me through MyTE expense processing?
+    - how to reimburse internet bill?
+    - how to claim internet bill?
+- intent: atci_ase
+  examples: |
+    - Can you give me the link for ase professional advancement program?
+    - How can I access ase professional advancement program courses?
+    - How to complete the courses in ase professional advancement program?
+
+- intent: mylearning
+  examples: |
+    - Where can I find the mandatory courses?
+    - How to complete the courses on mylearning?
+
+- intent: ethics
+  examples: |
+    - What is ethics and compliance and where can i find it?
+    - Provide me the link for ethics and compliance?
+    - Is it mandatory to complete ethics and compliance courses?
+
+- intent: primary_skill
+  examples: |
+    - I want to change my primary skill
+    - How can I update my primary skill?
+    - Change my primary skill, please
+
+- intent: secondary_skill
+  examples: |
+    - How can I add a secondary skill?
+    - Tell me about adding secondary skills
+    - Adding a new secondary skill
+       
+- intent: ask_mentor_network_purpose
+  examples: |
+    - Explain the purpose of the Mentor Network.
+    
+- intent: ask_is_mentor_program_part_of_iaspire
+  examples: |
+    - Is the Mentor Network program part of iAspire?
+    - Does iAspire include the Mentor Network program?
+    
+- intent: ask_who_is_a_mentor
+  examples: |
+    - Who is a mentor?
+    - Can you explain what a mentor is?
+    - Tell me about mentors.
+    
+- intent: ask_topics_for_mentor_guidance
+  examples: |
+    - What topics are covered in mentor guidance?
+    - Tell me about the subjects mentors can help with.
+    - Explain the areas of mentor support.
+    
+- intent: ask_how_to_get_matched_with_mentor
+  examples: |
+    - How can I get matched with a mentor?
+    - What's the process for mentor matching?
+    - Explain how I can find a mentor.
+    
+- intent: ask_how_to_connect_with_mentor
+  examples: |
+    - How do I connect with my mentor?
+    - What's the communication method with mentors?
+    - Tell me about connecting with mentors.
+    
+- intent: ask_can_opt_out_of_mentor_program
+  examples: |
+    - Can I opt out of the Mentor Network program?
+    - Is it possible to leave the mentor program?
+    - How can I stop participating in mentorship?
+    
+- intent: ask_can_change_mentor
+  examples: |
+    - Can I change my mentor?
+    - How do I switch to a different mentor?
+    - Tell me about changing my mentor.
+
+
+- intent: get_wbse_code_billable
+  examples: |
+    - wbse code for a [billable](billable) resource in [Chennai](location)
+    - What is the wbse code for a [billable](billable) resource in [Hyderabad](location)?
+    - Get the wbse code for a [billable](billable) resource in [Bangalore](location)
+
+
+- intent: get_wbse_code_non_billable
+  examples: |
+    - What is the wbse code for a [non-billable](non_billable) resource in [Chennai](location)?
+    - Provide the wbse code for a [non-billable](non_billable) resource in [Hyderabad](location)
+    - wbse code for a [non-billable](non_billable) resource in [Bangalore](location)
+    - How can I find the wbse code for resources marked as [non-billable](non_billable) in [Mumbai](location)?
+    - Tell me about the wbse code for resources that are [non-billable](non_billable) in [Delhi](location)
+    - wbse code for a [non-billable](non_billable) resource in [Hyderabad](location)
+
+- intent: get_wbse_code_atci_lt_6_months
+  examples: |
+    - What is the wbse code for [ATCI On-Job Shadow < 6 months](atci_on_job_shadow_lt_6_months) in [Hyderabad](location)?
+    - wbse code for [ATCI On-Job Shadow < 6 months](atci_on_job_shadow_lt_6_months) in [Chennai](location)
+    - Can you provide the wbse code for [ATCI On-Job Shadow < 6 months](atci_on_job_shadow_lt_6_months)?
+    - What's the wbse code for [ATCI On-Job Shadow < 6 months](atci_on_job_shadow_lt_6_months) in [Pune](location)?
+    - Give me the code for [ATCI On-Job Shadow < 6 months](atci_on_job_shadow_lt_6_months) in [Kolkata](location)
+    - [ATCI On-Job Shadow < 6 months](atci_on_job_shadow_lt_6_months) wbse code for [Mumbai](location)
+    - Provide the wbse code for [ATCI On-Job Shadow < 6 months](atci_on_job_shadow_lt_6_months) in [Gurugram](location)
+    - I need the wbse code for [ATCI On-Job Shadow < 6 months](atci_on_job_shadow_lt_6_months) in [Bangalore](location)
+    - What's the code for [ATCI On-Job Shadow < 6 months](atci_on_job_shadow_lt_6_months) in [Hyderabad](location)?
+
+- intent: get_wbse_code_atci_gt_6_months
+  examples: |
+    - What is the wbse code for [ATCI On-Job Shadow greater than 6 months](atci_on_job_shadow_gt_6_months) in [Hyderabad](location)?
+    - wbse code for [ATCI On-Job Shadow greater than 6 months](atci_on_job_shadow_gt_6_months) in [Chennai](location)
+    - Can you provide the wbse code for [ATCI On-Job Shadow greater than 6 months](atci_on_job_shadow_gt_6_months)?
+    - What's the wbse code for [ATCI On-Job Shadow greater than 6 months](atci_on_job_shadow_gt_6_months) in [Pune](location)?
+    - Give me the code for [ATCI On-Job Shadow greater than 6 months](atci_on_job_shadow_gt_6_months) in [Kolkata](location)
+    - [ATCI On-Job Shadow greater than 6 months](atci_on_job_shadow_gt_6_months) wbse code for [Mumbai](location)
+    - Provide the wbse code for [ATCI On-Job Shadow greater than 6 months](atci_on_job_shadow_gt_6_months) in [Gurugram](location)
+    - I need the wbse code for [ATCI On-Job Shadow greater than 6 months](atci_on_job_shadow_gt_6_months) in [Bangalore](location)
+    - What's the code for [ATCI On-Job Shadow greater than 6 months](atci_on_job_shadow_gt_6_months) in [Hyderabad](location)?
+
+- intent: get_wbse_code_avanade_within_6_months
+  examples: |
+    - What is the wbse code for [Avanade within 6 months](avanade_within_6_months) in [Hyderabad](location)?
+    - wbse code for [Avanade within 6 months](avanade_within_6_months) in [Chennai](location)
+    - Can you provide the wbse code for [Avanade within 6 months](avanade_within_6_months)?
+    - What's the wbse code for [Avanade within 6 months](avanade_within_6_months) in [Pune](location)?
+    - Give me the code for [Avanade within 6 months](avanade_within_6_months) in [Kolkata](location)
+    - [Avanade within 6 months](avanade_within_6_months) wbse code for [Mumbai](location)
+    - Provide the wbse code for [Avanade within 6 months](avanade_within_6_months) in [Gurugram](location)
+    - I need the wbse code for [Avanade within 6 months](avanade_within_6_months) in [Bangalore](location)
+    - What's the code for [Avanade within 6 months](avanade_within_6_months) in [Hyderabad](location)?
+
+- intent: get_wbse_code_avanade_gt_6_months
+  examples: |
+    - What is the wbse code for [Avanade more than 6 months](avanade_more_than_6_months) in [Hyderabad](location)?
+    - wbse code for [Avanade more than 6 months](avanade_more_than_6_months) in [Chennai](location)
+    - Can you provide the wbse code for [Avanade more than 6 months](avanade_more_than_6_months)?
+    - What's the wbse code for [Avanade more than 6 months](avanade_more_than_6_months) in [Pune](location)?
+    - Give me the code for [Avanade more than 6 months](avanade_more_than_6_months) in [Kolkata](location)
+    - [Avanade more than 6 months](avanade_more_than_6_months) wbse code for [Mumbai](location)
+    - Provide the wbse code for [Avanade more than 6 months](avanade_more_than_6_months) in [Gurugram](location)
+    - I need the wbse code for [Avanade more than 6 months](avanade_more_than_6_months) in [Bangalore](location)
+    - What's the code for [Avanade more than 6 months](avanade_more_than_6_months) in [Hyderabad](location)?
+
+
+
+- intent: ask_supervisor
+  examples: |
+    - Who is the workday supervisor of [Kalaivani Sivakumar](resource_name)?
+    - Who is the supervisor of [Srilekha Rapolu]](resource_name)?
+    - Tell me the supervisor of [Deepana Mathiyalagan](resource_name)
+    - Who manages [Ramakrishna Chemukula](resource_name)?
+
+- intent: ask_skills
+  examples: |
+    - What are the skills of [Prasad Boddu](resource_name)?
+    - List skills for [Mohan Kannappan](resource_name)
+    - Tell me the expertise of [Monica Narayanan](resource_name)
+
+- intent: ask_enterprise_id
+  examples: |
+    - What is the enterprise id of [Kalaivani Sivakumar](resource_name)?
+    - What is the enterprise id of [Srilekha Rapolu]](resource_name)?
+    - Tell me the enterprise id of [Zareen Ali](resource_name)
+
+- intent: ask_aspiration
+  examples: |
+    - What is the aspiration of [Babji Pedasingu](resource_name)?
+    - Tell me the aspiration for [Sujitha Vankayala](resource_name).
+    - What does [Ramakrishna Chemukula](resource_name) aspire to achieve?
+
+- intent: ask_training_status
+  examples: |
+    - What is the training status of [Zareen Ali](resource_name)?
+    - Can you provide the training status for [Sherrie Alphonse](resource_name)?
+    - Tell me about the training status of [Abirami Poongulazhi M](resource_name).
+
+- intent: ask_additional_skills
+  examples: |
+    - What are the additional skills of [Mandala Sandeep](resource_name)?
+    - Can you list the additional skills for [Prabhu Kiran Mullapudi](resource_name)?
+    - Tell me about the additional skills of [Deepana Mathiyalagan](resource_name).
+
+- intent: ask_trained_by
+  examples: |
+    - Who trained [Monica Narayanan](resource_name)?
+    - Tell me about the trainer of [Sri Harsha Chennamsetty](resource_name).
+    - Can you provide information about who trained [Sowjanya Peetani](resource_name)?
+
+- intent: ask_hiring_status
+  examples: |
+    - What is the hiring status of [Tarun Kumar Tarlana](resource_name)?
+    - Can you provide the hiring status for [Sowjanya Peetani](resource_name)?
+    - Tell me about the hiring status of [Nagalla Sri Lakshmi Sai](resource_name).
+
+- intent: ask_resource_joining_date
+  examples: |
+    - When did [Vaishnavi Sunchu](resource_name) join?
+    - Tell me the joining date of [Arumuga Thilagaraj Chidambaram](resource_name).
+    - Can you provide information about when [Raisa Amjath Khan](resource_name) joined?
+
+- intent: ask_techleap_status
+  examples: |
+    - What is the Techleap status of [Pardha Saradhi Gottapu](resource_name)?
+    - Can you provide the Techleap status for [Srilekha Rapolu](resource_name)?
+    - Tell me about the Techleap status of [Kalaivani Sivakumar](resource_name).
+        

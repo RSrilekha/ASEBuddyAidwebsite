@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASE Buddy Aid</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #logo-container {
+            position: relative;
+            opacity: 0.7;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #logo {
+            width: 400px; /* Adjust the width as needed */
+        }
+        #title {
+            font-size: 48px; /* Adjust the font size as needed */
+            margin-top: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+    <body>
+      <div id="logo-container">
+        <img id="logo" src="https://logos-world.net/wp-content/uploads/2020/07/Accenture-Logo.png" alt="Accenture Logo">
+    </div>
+   
+    
+    <h1 id="title">ASE Buddy Aid</h1> 
+    <style>
+      .rw-conversation-container .rw-header {
+        background: hsl(263, 73%, 51%);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+      .rw-conversation-container .rw-message-text .rw-markdown p:last-child {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+      }
+      .rw-conversation-container .rw-messages-container .rw-replies .rw-reply { /*buttons */
+        background-color: brown;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Add your preferred font-family */
+      }
+      .rw-conversation-container .rw-messages-container .rw-message .rw-client {
+        background: hsl(263, 73%, 51%);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Add your preferred font-family */
+      }
+      .rw-conversation-container .rw-messages-container .rw-client {
+        background-color: darkcyan;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Add your preferred font-family */
+      }
+      .rw-conversation-container .rw-messages-container .rw-conversation-container {
+        background-color: black;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Add your preferred font-family */
+      }
+   
+      .rw-conversation-container .rw-title.rw-with-avatar {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+   
+      .rw-conversation-container .rw-new-message {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+      .rw-launcher {
+        background: hsl(263, 73%, 51%);
+      /* Add your preferred font-family */
+      }
+      </style>
+      <script>!(function () {
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+              "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+              // Replace 1.x.x with the version that you want
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default
+                (
+                  {
+                    customData: { language: "en" },
+                    socketUrl: "http://localhost:5005/",
+                    interval: 100,
+                    title: 'ASE BUDDY AID',
+                    subtitle: 'We are online!',
+                    initPayload : '/greet',
+                    image: "https://wallpapertag.com/wallpaper/full/1/7/4/636167-cute-dogs-wallpapers-2560x2048-images.jpg" ,
+                    showMessageDate: true,
+                    inputTextFieldHint: "Type your message here...",
+                    showFullScreenButton: false,
+                    profileAvatar: "https://th.bing.com/th/id/OIP.RtvbenNPsX2fi-xPtW6KdgHaH0?pid=ImgDet&w=207&h=218&c=7" ,
+                    
+                  },
+                     null
+                );
+              }),
+              t.insertBefore(e, t.firstChild);
+          })();
+          localStorage.clear();
+      </script>
+    </body>
+</html> 

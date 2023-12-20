@@ -1,0 +1,287 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - gratitude
+  - open_websites
+  - get_weather
+  - learning_materials
+  - ask_id_card_instructions
+  - ask_how_to_book_room
+  - relocate
+  - book_seat
+  - download_payslip
+  - wfh_reimbursment
+  - bank_account_change
+  - apply_for_techleap
+  - assessment_mailers
+  - school_selection
+  - open_myte
+  - get_myte_expenses_instructions
+  - atci_ase
+  - mylearning
+  - ethics
+  - primary_skill
+  - secondary_skill
+  - ask_mentor_network_purpose
+  - ask_is_mentor_program_part_of_iaspire
+  - ask_who_is_a_mentor
+  - ask_topics_for_mentor_guidance
+  - ask_how_to_get_matched_with_mentor
+  - ask_how_to_connect_with_mentor
+  - ask_can_opt_out_of_mentor_program
+  - ask_can_change_mentor
+  - ask_excel_data
+  - inquire_data
+  - get_wbse_code_non_billable
+  - get_wbse_code_billable
+  - get_wbse_code_atci_lt_6_months
+  - get_wbse_code_atci_gt_6_months
+  - get_wbse_code_avanade_within_6_months
+  - get_wbse_code_avanade_gt_6_months
+  - ask_info
+  - ask_supervisor
+  - ask_skills
+  - ask_enterprise_id
+  - ask_aspiration
+  - ask_training_status
+  - ask_additional_skills
+  - ask_trained_by
+  - ask_hiring_status
+  - ask_resource_joining_date
+  - ask_techleap_status  
+
+entities:
+  - city
+  - topic
+  - email
+  - resource_name
+  - column_name
+  - column_value
+  - billable
+  - location
+  - non_billable
+  - atci_on_job_shadow_lt_6_months
+  - atci_on_job_shadow_gt_6_months
+  - avanade_more_than_6_months
+  - avanade_within_6_months
+  
+
+slots:
+  city:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: city
+
+  topic:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: topic
+
+  email:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: email
+
+  resource_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: resource_name
+
+  billable:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: billable
+
+  location:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: location
+
+  non_billable:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: non_billable
+
+  atci_on_job_shadow_lt_6_months:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: atci_on_job_shadow_lt_6_months
+
+  atci_on_job_shadow_gt_6_months:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: atci_on_job_shadow_gt_6_months
+
+  avanade_within_6_months:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: avanade_within_6_months
+
+  avanade_more_than_6_months:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: avanade_more_than_6_months
+  
+  column_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: column_name
+
+  column_value:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: column_value
+
+actions:
+  - action_get_wbse_code_billable
+  - action_get_wbse_code
+  - action_get_wbse_code_non_billable
+  - action_get_wbse_code_atci
+  - action_get_wbse_code_avanade_within_6_months
+  - action_get_wbse_code_avanade_more_than_6_months
+  - action_redirection
+  - action_get_weather
+  - utter_help
+  - utter_thanks
+  - action_fetch_learning_materials
+  - utter_learning_materials
+  - action_id
+  - action_booking_room
+  - action_book_seat
+  - action_relocate_location
+  - utter_response_learning
+  - action_download_monthly_payslip
+  - action_wfh_reimbursment
+  - action_bank_account_change
+  - action_apply_for_techleap
+  - action_assessment_mailers
+  - action_school_selection
+  - action_myte
+  - action_get_myte_expenses_instructions
+  - action_atci_ase
+  - action_mylearning
+  - action_ethics
+  - action_change_primary_skill
+  - action_add_secondary_skill
+  - utter_change_mood
+  - action_answer_questions
+  - action_get_resource_skills
+  - action_get_resource_mme_poc
+  - action_fetch_skills
+  - utter_thank_you
+  - utter_ask_skills
+  - utter_default
+  - action_get_supervisor
+  - action_get_skills
+  - action_get_enterprise_id
+  - action_get_aspiration
+  - action_get_training_status
+  - action_get_additional_skills
+  - action_get_trained_by
+  - action_get_hiring_status
+  - action_get_resource_joining_date
+  - action_get_techleap_status
+
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+    - text: "Hello there! How are you doing today?"
+    - text: "Hey! How's everything going with you?"
+    - text: "Hi! How's your day going?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://img.freepik.com/free-photo/isolated-happy-smiling-dog-white-background-portrait-2_1562-691.jpg?w=2000"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_change_mood:
+   - text: "Did that change your mood?"
+     buttons:
+     - title: "yes"
+       payload: /yes
+     - title: "no"
+       payload: /no
+  utter_help:
+    - text: "Great, How Can I help you?"
+    - text: "Great! How can I assist you today?"
+    - text: "Good to know! What can I help you with?"
+    - text: "Great! What can I do for you today?"
+  utter_happy:
+   - text: "Great, carry on!"  
+  utter_thanks:
+    - text: "Glad I could assist you. Have a fantastic day!"
+    - text: "You're welcome! If you have more questions, feel free to ask. Have a wonderful day!"
+    - text: "No problem at all! Remember, I'm here to help. Have an amazing day ahead!"
+
+
+  utter_learning_materials:
+   - text: "Sure, here are the few learning materials that I can provide you."
+     buttons:
+     - title: "Linux Learning Materials"
+       payload: "/click_link{'topic': 'Linux'}"
+     - title: "Azure Learning Materials"
+       payload: "/click_link{'topic': 'Azure'}"
+     - title: "AWS Learning Materials"
+       payload: "/click_link{'topic': 'AWS'}"
+     - title: "Data Science Learning Materials"
+       payload: "/click_link{'topic': 'Data Science'}"
+     - title: "Python Learning Materials"
+       payload: "/click_link{'topic': 'Python'}"
+  utter_response_learning:
+    - text: "Feel free to explore all the links. Happy Learning!"
+  utter_response_learning_materials :
+    - text: "Sure, here are the {topic} learning materials."
+  
+  utter_default:
+   - text: "I'm sorry, I couldn't understand your question."
+  
+  utter_not_found:
+    - text: "I couldn't find information for the provided email address."
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+templates:
+  utter_ask_skills:
+    - text: "Sure, let me find the skills for {resource_name}."
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

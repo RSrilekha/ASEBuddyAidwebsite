@@ -1,0 +1,471 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Activate help
+  steps:
+  - intent: mood
+  - action: utter_help
+
+- rule: Acknowledge thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- rule: Handle open_websites 
+  steps:
+  - intent: open_websites
+  - action: action_redirection
+
+- rule: weather data
+  steps:
+  - intent: get_weather
+    entities: 
+    - entity: city
+  - action: action_get_weather
+
+- rule: download_monthly_payslip
+  steps:
+  - intent: download_payslip
+  - action: action_download_monthly_payslip
+
+- rule: wfh_reimbursment
+  steps:
+  - intent: wfh_reimbursment
+  - action: action_wfh_reimbursment
+
+- rule: change_bank_account
+  steps:
+  - intent: bank_account_change
+  - action: action_bank_account_change
+
+- rule: apply_for_techleap
+  steps:
+  - intent: apply_for_techleap
+  - action: action_apply_for_techleap
+
+- rule: assessment_mailers
+  steps:
+  - intent: assessment_mailers
+  - action: action_assessment_mailers
+
+- rule: school_selection
+  steps: 
+  - intent: school_selection
+  - action: action_school_selection
+
+- rule: open myte url when user asks
+  steps:
+  - intent: open_myte
+  - action: action_myte
+
+- rule: get_myte_expenses_instructions
+  steps: 
+  - intent: get_myte_expenses_instructions
+  - action: action_get_myte_expenses_instructions
+
+- rule: ask_id_card_instructions
+  steps: 
+  - intent: ask_id_card_instructions
+  - action: action_id
+
+- rule: ask_how_to_book_room
+  steps: 
+  - intent: ask_how_to_book_room
+  - action: action_booking_room
+
+- rule: relocate
+  steps: 
+  - intent: relocate
+  - action: action_relocate_location
+
+- rule: book_seat
+  steps: 
+  - intent: book_seat
+  - action: action_book_seat
+
+- rule: user asks for learning materials
+  steps:
+  - intent: learning_materials
+    entities:
+    - entity: topic
+  - action:  utter_response_learning_materials 
+  - action: action_fetch_learning_materials
+  - action: utter_response_learning
+
+- rule: atci_ase
+  steps: 
+  - intent: atci_ase
+  - action: action_atci_ase
+
+- rule: mylearning
+  steps: 
+  - intent: mylearning
+  - action: action_mylearning
+
+- rule: ethics
+  steps: 
+  - intent: ethics
+  - action: action_ethics
+
+- rule: Billable wbse code in Chennai
+  steps:
+  - intent: get_wbse_code_billable
+    entities:
+    - billable: "billable"
+    - location: "Chennai"
+  - action: action_get_wbse_code_billable
+
+- rule: Billable wbse code in Bangalore
+  steps:
+  - intent: get_wbse_code_billable
+    entities:
+    - billable: "billable"
+    - location: "Bangalore"
+  - action: action_get_wbse_code_billable
+
+
+- rule: Billable wbse code in Hyderabad
+  steps:
+  - intent: get_wbse_code_billable
+    entities:
+    - billable: "billable"
+    - location: "Hyderabad"
+  - action: action_get_wbse_code_billable
+
+- rule: Non-billable wbse code in Chennai
+  steps:
+  - intent: get_wbse_code_non_billable
+    entities:
+    - non_billable: "non_billable"
+    - location: "Chennai"
+  - action: action_get_wbse_code_non_billable
+
+- rule: Non-billable wbse code in Hyderabad
+  steps:
+  - intent: get_wbse_code_non_billable
+    entities:
+    - non_billable: "non_billable"
+    - location: "Hyderabad"
+  - action: action_get_wbse_code_non_billable
+
+- rule: Non-billable wbse code in Bangalore
+  steps:
+  - intent: get_wbse_code_non_billable
+    entities:
+    - non_billable: "non_billable"
+    - location: "Bangalore"
+  - action: action_get_wbse_code_non_billable
+
+
+- rule: Get wbse Code for ATCI On-Job Shadow < 6 months in Hyderabad
+  steps:
+  - intent: get_wbse_code_atci_lt_6_months
+    entities:
+    - atci_on_job_shadow_lt_6_months: "ATCI On-Job Shadow < 6 months"
+    - location: "Hyderabad"
+  - action: action_get_wbse_code
+
+- rule: Get wbse Code for ATCI On-Job Shadow < 6 months in Chennai
+  steps:
+  - intent: get_wbse_code_atci_lt_6_months
+    entities:
+    - atci_on_job_shadow_lt_6_months: "ATCI On-Job Shadow < 6 months"
+    - location: "Chennai"
+  - action: action_get_wbse_code
+
+- rule: Get wbse Code for ATCI On-Job Shadow < 6 months in Bangalore
+  steps:
+  - intent: get_wbse_code_atci_lt_6_months
+    entities:
+    - atci_on_job_shadow_lt_6_months: "ATCI On-Job Shadow < 6 months"
+    - location: "Bangalore"
+  - action: action_get_wbse_code
+
+- rule: Get wbse Code for ATCI On-Job Shadow < 6 months in Mumbai
+  steps:
+  - intent: get_wbse_code_atci_lt_6_months
+    entities:
+    - atci_on_job_shadow_lt_6_months: "ATCI On-Job Shadow < 6 months"
+    - location: "Mumbai"
+  - action: action_get_wbse_code
+
+- rule: Get wbse Code for ATCI On-Job Shadow < 6 months in Pune
+  steps:
+  - intent: get_wbse_code_atci_lt_6_months
+    entities:
+    - atci_on_job_shadow_lt_6_months: "ATCI On-Job Shadow < 6 months"
+    - location: "Pune"
+  - action: action_get_wbse_code
+
+- rule: Get wbse Code for ATCI On-Job Shadow < 6 months in Kolkata
+  steps:
+  - intent: get_wbse_code_atci_lt_6_months
+    entities:
+    - atci_on_job_shadow_lt_6_months: "ATCI On-Job Shadow < 6 months"
+    - location: "Kolkata"
+  - action: action_get_wbse_code
+
+- rule: Get wbse Code for ATCI On-Job Shadow > 6 months in Chennai
+  steps:
+  - intent: get_wbse_code_atci_gt_6_months
+    entities:
+    - atci_on_job_shadow_gt_6_months: "ATCI On-Job Shadow > 6 months"
+    - location: "Chennai"
+  - action: action_get_wbse_code_atci
+
+- rule: Get wbse Code for ATCI On-Job Shadow > 6 months in Pune
+  steps:
+  - intent: get_wbse_code_atci_gt_6_months
+    entities:
+    - atci_on_job_shadow_gt_6_months: "ATCI On-Job Shadow > 6 months"
+    - location: "Pune"
+  - action: action_get_wbse_code_atci
+
+- rule: Get wbse Code for ATCI On-Job Shadow > 6 months in Kolkata
+  steps:
+  - intent: get_wbse_code_atci_gt_6_months
+    entities:
+    - atci_on_job_shadow_gt_6_months: "ATCI On-Job Shadow > 6 months"
+    - location: "Kolkata"
+  - action: action_get_wbse_code_atci
+
+- rule: Get wbse Code for ATCI On-Job Shadow > 6 months in Mumbai
+  steps:
+  - intent: get_wbse_code_atci_gt_6_months
+    entities:
+    - atci_on_job_shadow_gt_6_months: "ATCI On-Job Shadow > 6 months"
+    - location: "Mumbai"
+  - action: action_get_wbse_code_atci
+
+- rule: Get wbse Code for ATCI On-Job Shadow > 6 months in Gurugram
+  steps:
+  - intent: get_wbse_code_atci_gt_6_months
+    entities:
+    - atci_on_job_shadow_gt_6_months: "ATCI On-Job Shadow > 6 months"
+    - location: "Gurugram"
+  - action: action_get_wbse_code_atci
+
+- rule: Get wbse Code for ATCI On-Job Shadow > 6 months in Bangalore
+  steps:
+  - intent: get_wbse_code_atci_gt_6_months
+    entities:
+    - atci_on_job_shadow_gt_6_months: "ATCI On-Job Shadow > 6 months"
+    - location: "Bangalore"
+  - action: action_get_wbse_code_atci
+
+- rule: Get wbse Code for ATCI On-Job Shadow > 6 months in Hyderabad
+  steps:
+  - intent: get_wbse_code_atci_gt_6_months
+    entities:
+    - atci_on_job_shadow_gt_6_months: "ATCI On-Job Shadow > 6 months"
+    - location: "Hyderabad"
+  - action: action_get_wbse_code_atci
+
+- rule: Get wbse Code for Avanade within 6 months in Hyderabad
+  steps:
+  - intent: get_wbse_code_avanade_within_6_months
+    entities:
+    - avanade_within_6_months: "Avanade within 6 months"
+    - location: "Hyderabad"
+  - action: action_get_wbse_code_avanade_within_6_months
+
+- rule: Get wbse Code for Avanade within 6 months in Chennai
+  steps:
+  - intent: get_wbse_code_avanade_within_6_months
+    entities:
+    - avanade_within_6_months: "Avanade within 6 months"
+    - location: "Chennai"
+  - action: action_get_wbse_code_avanade_within_6_months
+
+- rule: Get wbse Code for Avanade within 6 months in Pune
+  steps:
+  - intent: get_wbse_code_avanade_within_6_months
+    entities:
+    - avanade_within_6_months: "Avanade within 6 months"
+    - location: "Pune"
+  - action: action_get_wbse_code_avanade_within_6_months
+
+- rule: Get wbse Code for Avanade within 6 months in Kolkata
+  steps:
+  - intent: get_wbse_code_avanade_within_6_months
+    entities:
+    - avanade_within_6_months: "Avanade within 6 months"
+    - location: "Kolkata"
+  - action: action_get_wbse_code_avanade_within_6_months
+
+- rule: Get wbse Code for Avanade within 6 months in Mumbai
+  steps:
+  - intent: get_wbse_code_avanade_within_6_months
+    entities:
+    - avanade_within_6_months: "Avanade within 6 months"
+    - location: "Mumbai"
+  - action: action_get_wbse_code_avanade_within_6_months
+
+- rule: Get wbse Code for Avanade within 6 months in Gurugram
+  steps:
+  - intent: get_wbse_code_avanade_within_6_months
+    entities:
+    - avanade_within_6_months: "Avanade within 6 months"
+    - location: "Gurugram"
+  - action: action_get_wbse_code_avanade_within_6_months
+
+- rule: Get wbse Code for Avanade within 6 months in Bangalore
+  steps:
+  - intent: get_wbse_code_avanade_within_6_months
+    entities:
+    - avanade_within_6_months: "Avanade within 6 months"
+    - location: "Bangalore"
+  - action: action_get_wbse_code_avanade_within_6_months
+
+- rule: Get wbse Code for Avanade within 6 months in Hyderabad
+  steps:
+  - intent: get_wbse_code_avanade_within_6_months
+    entities:
+    - avanade_within_6_months: "Avanade within 6 months"
+    - location: "Hyderabad"
+  - action: action_get_wbse_code_avanade_within_6_months
+- rule: Get wbse Code for Avanade more than 6 months in Hyderabad
+  steps:
+  - intent: get_wbse_code_avanade_gt_6_months
+    entities:
+    - avanade_more_than_6_months: "Avanade more than 6 months"
+    - location: "Hyderabad"
+  - action: action_get_wbse_code_avanade_more_than_6_months
+
+- rule: Get wbse Code for Avanade more than 6 months in Chennai
+  steps:
+  - intent: get_wbse_code_avanade_gt_6_months
+    entities:
+    - avanade_more_than_6_months: "Avanade more than 6 months"
+    - location: "Chennai"
+  - action: action_get_wbse_code_avanade_more_than_6_months
+
+- rule: Get wbse Code for Avanade more than 6 months in Pune
+  steps:
+  - intent: get_wbse_code_avanade_gt_6_months
+    entities:
+    - avanade_more_than_6_months: "Avanade more than 6 months"
+    - location: "Pune"
+  - action: action_get_wbse_code_avanade_more_than_6_months
+
+- rule: Get wbse Code for Avanade more than 6 months in Kolkata
+  steps:
+  - intent: get_wbse_code_avanade_gt_6_months
+    entities:
+    - avanade_more_than_6_months: "Avanade more than 6 months"
+    - location: "Kolkata"
+  - action: action_get_wbse_code_avanade_more_than_6_months
+
+- rule: Get wbse Code for Avanade more than 6 months in Mumbai
+  steps:
+  - intent: get_wbse_code_avanade_gt_6_months
+    entities:
+    - avanade_more_than_6_months: "Avanade more than 6 months"
+    - location: "Mumbai"
+  - action: action_get_wbse_code_avanade_more_than_6_months
+
+- rule: Get wbse Code for Avanade more than 6 months in Gurugram
+  steps:
+  - intent: get_wbse_code_avanade_gt_6_months
+    entities:
+    - avanade_more_than_6_months: "Avanade more than 6 months"
+    - location: "Gurugram"
+  - action: action_get_wbse_code_avanade_more_than_6_months
+
+- rule: Get wbse Code for Avanade more than 6 months in Bangalore
+  steps:
+  - intent: get_wbse_code_avanade_gt_6_months
+    entities:
+    - avanade_more_than_6_months: "Avanade more than 6 months"
+    - location: "Bangalore"
+  - action: action_get_wbse_code_avanade_more_than_6_months
+
+- rule: Get wbse Code for Avanade more than 6 months in Hyderabad
+  steps:
+  - intent: get_wbse_code_avanade_gt_6_months
+    entities:
+    - avanade_more_than_6_months: "Avanade more than 6 months"
+    - location: "Hyderabad"
+  - action: action_get_wbse_code_avanade_more_than_6_months
+
+- rule: Ask Supervisor Example
+  steps:
+  - intent: ask_supervisor
+    entities:
+    - resource_name: "Kalaivani Sivakumar"
+  - action: action_get_supervisor
+
+- rule: Ask Skills Example
+  steps:
+  - intent: ask_skills
+    entities:
+    - resource_name: "Prasad Boddu"
+  - action: action_get_skills
+
+- rule: Ask Enterprise ID Example
+  steps:
+  - intent: aask_enterprise_id
+    entities:
+    - resource_name: "Zareen Ali"
+  - action: action_get_enterprise_id
+
+- rule: Ask Aspiration Example
+  steps:
+  - intent: ask_aspiration
+    entities:
+    - resource_name: "Babji Pedasingu"
+  - action: action_get_aspiration
+
+- rule: Ask Training Status Example
+  steps:
+  - intent: ask_training_status
+    entities:
+    - resource_name: "Sujitha Vankayala"
+  - action: action_get_training_status
+
+- rule: Ask Additional Skills Example
+  steps:
+  - intent: ask_additional_skills
+    entities:
+    - resource_name: "Mandala Sandeep"
+  - action: action_get_additional_skills
+
+- rule: Ask Trained By Example
+  steps:
+  - intent: ask_trained_by
+    entities:
+    - resource_name: "Monica Narayanan"
+  - action: action_get_trained_by
+
+- rule: Ask Hiring Status Example
+  steps:
+  - intent: ask_hiring_status
+    entities:
+    - resource_name: "Tarun Kumar Tarlana"
+  - action: action_get_hiring_status
+
+- rule: Ask Resource Joining Date Example
+  steps:
+  - intent: ask_resource_joining_date
+    entities:
+    - resource_name: "Vaishnavi Sunchu"
+  - action: action_get_resource_joining_date
+
+- rule: Ask Techleap Status Example
+  steps:
+  - intent: ask_techleap_status
+    entities:
+    - resource_name: "Pardha Saradhi Gottapu"
+  - action: action_get_techleap_status
+
